@@ -4,80 +4,253 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PT Catur Baja Nusantara</title>
+
+  <!-- FONT -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <style>
-    body { font-family: 'Poppins', sans-serif; margin: 0; background:#f5f7fa; }
-    header { background: linear-gradient(90deg,#0f172a,#1e293b); color: white; padding: 30px; text-align: center; }
-    nav { background: #020617; padding: 15px; text-align: center; position: sticky; top:0; }
-    nav a { color: white; margin: 0 20px; text-decoration: none; font-weight: 500; }
-    nav a:hover { color: #38bdf8; }
-    section { padding: 60px 20px; max-width: 1100px; margin:auto; }
-    .hero { text-align: center; }
-    .hero h2 { font-size: 40px; margin-bottom:10px; }
-    .hero p { font-size:18px; color:#555; }
-    .btn { background:#0ea5e9; color:white; padding:12px 25px; border-radius:8px; text-decoration:none; display:inline-block; margin-top:20px; }
-    .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap:25px; }
-    .card { background:white; padding:25px; border-radius:12px; box-shadow:0 5px 15px rgba(0,0,0,0.1); }
-    .card h3 { margin-top:0; }
-    .dark { background:#0f172a; color:white; }
-    .dark p { color:#cbd5f5; }
-    footer { background:#020617; color:white; text-align:center; padding:25px; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: #f8fafc;
+      color: #1e293b;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    /* HEADER */
+    header {
+      background: #0f172a;
+      color: white;
+      padding: 15px 0;
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .logo {
+      width: 70px;
+      background: white;
+      padding: 5px;
+      border-radius: 8px;
+    }
+
+    /* NAV */
+    nav {
+      background: #1e293b;
+      text-align: center;
+      padding: 10px;
+      position: sticky;
+      top: 0;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('produk1.jpg');
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      background: #22c55e;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* SECTION */
+    section {
+      padding: 60px 20px;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    /* CARD */
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 15px;
+    }
+
+    .card p {
+      margin: 0 15px 15px;
+      color: #555;
+    }
+
+    /* KEUNGGULAN */
+    .dark {
+      background: #0f172a;
+      color: white;
+    }
+
+    .dark ul {
+      max-width: 600px;
+      margin: auto;
+      line-height: 2;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #020617;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
   </style>
 </head>
+
 <body>
 
 <header>
-  <h1>PT Catur Baja Nusantara</h1>
-  <p>Industrial Steel Fabrication & Construction Specialist</p>
+  <div class="container header-container">
+    <img src="logo.png" class="logo">
+    <div>
+      <h1>PT Catur Baja Nusantara</h1>
+      <p>Spesialis Fabrikasi Karoseri, PJU & Konstruksi Baja</p>
+    </div>
+  </div>
 </header>
 
 <nav>
   <a href="#">Home</a>
-  <a href="#about">Tentang</a>
-  <a href="#services">Layanan</a>
-  <a href="#project">Project</a>
-  <a href="#contact">Kontak</a>
+  <a href="#produk">Produk</a>
+  <a href="#keunggulan">Keunggulan</a>
+  <a href="#kontak">Kontak</a>
 </nav>
 
 <section class="hero">
-  <h2>Solusi Konstruksi Baja Profesional</h2>
-  <p>Melayani fabrikasi, laser cutting, bending, dan konstruksi untuk proyek industri & pemerintahan.</p>
-  <a href="https://wa.me/628xxxxxxxxxx" class="btn">Hubungi Kami</a>
+  <h2>Solusi Fabrikasi Baja Profesional</h2>
+  <p>Kami melayani kebutuhan industri dengan kualitas tinggi dan harga kompetitif</p>
+  <a href="https://wa.me/6289519275110" class="btn">Konsultasi Sekarang</a>
 </section>
 
-<section id="about">
-  <h2>Tentang Perusahaan</h2>
-  <p>PT Catur Baja Nusantara adalah perusahaan yang bergerak di bidang fabrikasi baja dan konstruksi dengan standar industri tinggi. Kami berpengalaman dalam menangani proyek skala kecil hingga besar termasuk kebutuhan proyek pemerintah (PJU, struktur baja, dll).</p>
-</section>
-
-<section id="services">
-  <h2>Layanan Kami</h2>
-  <div class="grid">
-    <div class="card"><h3>Laser Cutting</h3><p>Presisi tinggi dengan mesin modern.</p></div>
-    <div class="card"><h3>Bending</h3><p>Pembentukan plat sesuai desain teknik.</p></div>
-    <div class="card"><h3>Fabrikasi Baja</h3><p>Custom project seperti tangki, tiang PJU, dll.</p></div>
-    <div class="card"><h3>Konstruksi</h3><p>Pengerjaan proyek struktur baja & sipil.</p></div>
+<section>
+  <div class="container">
+    <h2>Tentang Kami</h2>
+    <p>
+      PT Catur Baja Nusantara adalah perusahaan yang bergerak di bidang fabrikasi logam dan konstruksi baja.
+      Kami berpengalaman dalam pembuatan tangki, tiang PJU, serta berbagai kebutuhan industri lainnya.
+    </p>
   </div>
 </section>
 
-<section id="project" class="dark">
-  <h2>Portfolio Project</h2>
-  <div class="grid">
-    <div class="card"><h3>Tiang PJU</h3><p>Produksi & instalasi tiang PJU galvanis.</p></div>
-    <div class="card"><h3>Tangki Industri</h3><p>Fabrikasi tangki stainless & mild steel.</p></div>
-    <div class="card"><h3>Cutting Project</h3><p>Part industri dengan CNC & laser cutting.</p></div>
+<section id="produk">
+  <div class="container">
+    <h2>Produk Kami</h2>
+
+    <div class="grid">
+      <div class="card">
+        <img src="produk1.jpg">
+        <h3>Tangki Air & Solar</h3>
+        <p>Pembuatan tangki berbagai kapasitas sesuai kebutuhan proyek.</p>
+      </div>
+
+      <div class="card">
+        <img src="produk2.jpg">
+        <h3>Tiang PJU</h3>
+        <p>Produksi tiang lampu jalan standar proyek pemerintah & swasta.</p>
+      </div>
+
+      <div class="card">
+        <img src="produk3.jpg">
+        <h3>Laser Cutting</h3>
+        <p>Layanan cutting presisi tinggi dan hasil rapi.</p>
+      </div>
+
+      <div class="card">
+        <img src="produk4.jpg">
+        <h3>Bending</h3>
+        <p>Pengerjaan bending berbagai jenis material dengan akurat.</p>
+      </div>
+
+      <div class="card">
+        <img src="produk5.jpg">
+        <h3>Fabrikasi Custom</h3>
+        <p>Melayani berbagai kebutuhan fabrikasi sesuai desain.</p>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<section id="contact">
-  <h2>Kontak Kami</h2>
-  <p><b>Alamat:</b> Tangerang, Banten</p>
-  <p><b>WhatsApp:</b> 08xxxxxxxxxx</p>
-  <p><b>Email:</b> info@caturbaja.com</p>
+<section id="keunggulan" class="dark">
+  <h2>Kenapa Pilih Kami?</h2>
+  <ul>
+    <li>✔ Harga kompetitif & transparan</li>
+    <li>✔ Pengerjaan cepat & tepat waktu</li>
+    <li>✔ Tenaga ahli berpengalaman</li>
+    <li>✔ Bisa custom sesuai kebutuhan</li>
+    <li>✔ Kualitas material terjamin</li>
+  </ul>
+</section>
+
+<section id="kontak">
+  <div class="container">
+    <h2>Kontak Kami</h2>
+    <p>Alamat: Mekar Bakti Panongan Kabupaten Tangerang Prov Banten</p>
+    <p>WhatsApp: 089519275110</p>
+    <a href="https://wa.me/6289519275110" class="btn">Hubungi Kami</a>
+  </div>
 </section>
 
 <footer>
-  <p>&copy; 2026 PT Catur Baja Nusantara | All Rights Reserved</p>
+  <p>© 2026 PT Catur Baja Nusantara</p>
 </footer>
 
 </body>
